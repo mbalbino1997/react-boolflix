@@ -7,7 +7,7 @@ export default function () {
     return (<>
         <section>
             <div className="container">
-                <h1 className={style.movie_type}>Film</h1>
+                <h1 className={style.movie_type}>FILM</h1>
                 <div className="row">
                     {moviesArray.map((movie) => (
                         <div key={movie.id} className="col">
@@ -20,7 +20,7 @@ export default function () {
         </section>
         <section>
             <div className="container">
-                <h1 className={style.movie_type}>Serie TV</h1>
+                <h1 className={style.movie_type}>SERIE TV</h1>
                 <div className="row">
                     <div className="col">
                         <Card />

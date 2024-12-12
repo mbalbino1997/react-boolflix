@@ -8,4 +8,14 @@ header {
 
 .title {
     color: #E50914;
+    text-shadow:
+        0 0 5px #E50914,
+        /* Bagliore vicino */
+        0 0 10px #E50914,
+        /* Bagliore medio */
+        0 0 20px #E50914,
+        /* Bagliore più lontano */
+        0 0 40px #ff0000,
+        /* Colore rosso acceso */
+        0 0 80px #ff4500;
 }
