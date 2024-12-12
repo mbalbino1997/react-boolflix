@@ -4,7 +4,7 @@ import Footer from './components/layout/footer/Footer'
 import GlobalContext from './context/GlobalContext'
 import axios from 'axios'
 import './App.css'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 export default function App() {
   const [moviesArray, setMoviesArray] = useState([]);
@@ -18,12 +18,15 @@ export default function App() {
         language: "it"
       },
     }).then((res) => {
-      setMoviesArray(res.data);
-      console.log(res.data);
+      setMoviesArray(res.data.results);
+      console.log(res.data.results);
 
     }).catch((err) => { console.error(err.message); })
   }
-  fetchData();
+  useEffect(() => {
+    fetchData();
+
+  }, [])
   return (
     <GlobalContext.Provider value={{ fetchData, moviesArray, setMoviesArray }}>
       <Header />

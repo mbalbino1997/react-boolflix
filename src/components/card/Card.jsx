@@ -1,11 +1,17 @@
 import style from "./Card.module.css"
-export default function Card() {
+export default function Card({ movie }) {
+    if (!movie) {
+        return <div>Nessun film disponibile</div>;
+    }
+    const { title, original_title, original_language, vote_average } = movie
     return (
+
         <div>
-            <h1>titolo</h1>
-            <h1>titolo originale</h1>
-            <h3>lingua</h3>
-            <h4>voto</h4>
+            <h1>{title}</h1>
+            <h1>{original_title}</h1>
+            <h3>{original_language}</h3>
+            <h4>{vote_average}</h4>
         </div>
+
     )
 }
