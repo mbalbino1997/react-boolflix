@@ -1,11 +1,12 @@
 .movie_type {
-    color: #E50914;
+    color: white;
     text-shadow:
-        0 0 5px #E50914,
-        0 0 10px #E50914,
-        0 0 20px #E50914,
-        0 0 40px #ff0000,
-        0 0 80px #ff4500;
-    font-size: 3rem;
+        0 0 1px #E50914,
+        0 0 1px #E50914,
+        0 0 1px #E50914,
+        0 0 1px #ff0000,
+        0 0 1px #ff4500;
+    font-size: 2.2rem;
     font-weight: 800;
+    margin: 10px 0;
 }
