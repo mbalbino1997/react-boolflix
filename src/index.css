@@ -13,15 +13,19 @@
 
 .row {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
-    gap: 30px;
 }
 
 .col {
     width: 25%;
+    padding: 10px;
 }
 
 .card {
     width: 100%;
+    background-color: #f8f8f8;
+    padding: 10px;
+    border: 1px solid #ccc;
+    height: 100%;
 }
