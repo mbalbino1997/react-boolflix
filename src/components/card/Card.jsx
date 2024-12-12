@@ -6,7 +6,7 @@ export default function Card({ movie }) {
     const { title, original_title, original_language, vote_average } = movie
     return (
 
-        <div>
+        <div className="card">
             <h1>{title}</h1>
             <h1>{original_title}</h1>
             <h3>{original_language}</h3>
