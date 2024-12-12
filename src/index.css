@@ -6,6 +6,10 @@
     text-wrap: wrap;
 }
 
+body {
+    background-color: rgba(0, 0, 0, 0.76);
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -23,6 +27,7 @@
 }
 
 .card {
+    border-radius: 15px;
     width: 100%;
     background-color: #f8f8f8;
     padding: 10px;

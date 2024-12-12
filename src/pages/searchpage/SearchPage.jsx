@@ -10,7 +10,6 @@ export default function () {
                 <h1>Film</h1>
                 <div className="row">
                     {moviesArray.map((movie) => (
-
                         <div key={movie.id} className="col">
                             <Card movie={movie} />
                         </div>

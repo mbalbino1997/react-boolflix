@@ -1,5 +1,6 @@
+import style from "./SearchButton.module.css"
 export default function SearchButton() {
     return (
-        <button>search</button>
+        <button className={style.search_btn}>search</button>
     )
 }
