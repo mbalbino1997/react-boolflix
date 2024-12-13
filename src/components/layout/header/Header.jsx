@@ -30,17 +30,19 @@ export default function Header() {
     //     fetchData();
 
     // }, [])
-    return (
+    return (<>
+        <hr />
         <header className={style.header}>
             <h1 className={style.title}>BOOLFLIX</h1>
             <div className={style.search}>
-                <input type="text" value={queryText} onChange={(e) => setQueryText(e.target.value)} />
+                <input className={style.input_text} type="text" value={queryText} onChange={(e) => setQueryText(e.target.value)} />
                 <SearchButton onClick={() => {
                     fetchData(api_serie)
                     fetchData(api_movie)
                 }} />
             </div>
-
         </header>
+        <hr />
+    </>
     )
 }

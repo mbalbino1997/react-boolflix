@@ -1,23 +1,22 @@
 .search_btn {
-    background-color: #E50914;
+    background-color: #40E0D0;
     color: #ffffff;
     border: none;
     border-radius: 4px;
     padding: 5px 10px;
     font-size: 16px;
     font-weight: bold;
-    text-transform: uppercase;
     cursor: pointer;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
 }
 
 .search_btn:hover {
-    background-color: #f40612;
+    background-color: #227d74;
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
 }
 
 .search_btn:active {
-    background-color: #c1080f;
-    transform: scale(0.98);
+    background-color: #40E0D0;
+    transform: scale(0.7);
 }

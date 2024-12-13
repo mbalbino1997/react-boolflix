@@ -1,11 +1,15 @@
 .movie_type {
     color: white;
     text-shadow:
-        0 0 1px #E50914,
-        0 0 1px #E50914,
-        0 0 1px #E50914,
-        0 0 1px #ff0000,
-        0 0 1px #ff4500;
+        0 0 1px #40E0D0,
+        /* Turchese chiaro */
+        0 0 1px #40E0D0,
+        0 0 1px #40E0D0,
+        0 0 1px #00CED1,
+        /* Turchese più intenso */
+        0 0 1px #48D1CC;
+    /* Sfumatura morbida */
+
     font-size: 2.2rem;
     font-weight: 800;
     margin: 10px 0;

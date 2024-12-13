@@ -1,5 +1,5 @@
 header {
-    background-color: black;
+    background-color: #0A0A1E;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -7,17 +7,59 @@ header {
 }
 
 .title {
-    color: #E50914;
+    color: white;
     text-shadow:
-        0 0 5px #E50914,
-        0 0 10px #E50914,
-        0 0 20px #E50914,
-        0 0 40px #ff0000,
-        0 0 80px #ff4500;
+        0 0 5px #40E0D0,
+        /* Turchese chiaro */
+        0 0 10px #40E0D0,
+        0 0 20px #40E0D0,
+        0 0 40px #00CED1,
+        /* Più intenso */
+        0 0 80px #48D1CC;
+    /* Turchese più morbido */
+
 }
 
 .search {
     display: flex;
     gap: 15px;
-    align-items: center;
+}
+
+.input_text {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px 15px;
+    font-size: 16px;
+    color: #FFFFFF;
+    /* Testo bianco */
+    background-color: #1A1A2E;
+    /* Blu notte scuro */
+    border: 2px solid #0F3460;
+    /* Blu notte intermedio */
+    border-radius: 8px;
+    /* Angoli arrotondati */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    /* Leggera ombra */
+    transition: all 0.3s ease;
+    /* Animazione fluida per hover e focus */
+}
+
+/* Effetto al passaggio del mouse */
+.input_text:hover {
+    border-color: #533483;
+    /* Colore di bordo accento */
+    box-shadow: 0 6px 8px rgba(83, 52, 131, 0.4);
+    /* Ombra accento */
+}
+
+/* Effetto al focus */
+.input_text:focus {
+    outline: none;
+    /* Rimuove il bordo predefinito */
+    border-color: #3C8DBC;
+    /* Colore blu brillante */
+    box-shadow: 0 6px 12px rgba(60, 141, 188, 0.6);
+    /* Ombra più intensa */
+    background-color: #162447;
+    /* Blu notte più profondo */
 }
