@@ -3,10 +3,7 @@ import Placeholder from "../../assets/imgs/placeholder.jpg"
 import it from "../../assets/imgs/it.png"
 import en from "../../assets/imgs/en.png"
 import fr from "../../assets/imgs/fr.png"
-export default function Card({ movie }) {
-    if (!movie) {
-        return <div>Nessun film disponibile</div>;
-    }
+export default function Card({ movie = "", serie = "" }) {
     const flagIcon = {
         it,
         en,
@@ -20,11 +17,12 @@ export default function Card({ movie }) {
             <p>TITOLO: <br />{title}</p>
             <p>TITOLO ORIGINALE: <br />{original_title}</p>
             <p>LINGUA:</p><img src={flagIcon[original_language]} alt="" />
-            <p>VOTO:{vote_average}</p>
+            <p>VOTO: <br />{Math.ceil(vote_average / 2)}</p>
             <figure className={style.img_position}>
                 <img className="card-img" src={movie.poster_path ? `${BASE_URL}${movie.poster_path}` : Placeholder} alt="" />
             </figure>
         </div>
 
     )
+
 }

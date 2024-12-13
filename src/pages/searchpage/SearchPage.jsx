@@ -3,7 +3,7 @@ import Card from "../../components/card/Card"
 import { useContext } from "react"
 import GlobalContext from "../../context/GlobalContext"
 export default function () {
-    const { moviesArray, setMoviesArray } = useContext(GlobalContext);
+    const { moviesArray, setMoviesArray, seriesArray } = useContext(GlobalContext);
     return (<>
         <section>
             <div className="container">
@@ -22,9 +22,13 @@ export default function () {
             <div className="container">
                 <h1 className={style.movie_type}>SERIE TV</h1>
                 <div className="row">
-                    <div className="col">
-                        <Card />
-                    </div>
+
+                    {seriesArray.map((serie) => (
+                        <div key={serie.id} className="col">
+                            <Card movie={serie} />
+                        </div>
+                    ))
+                    }
                 </div>
             </div>
         </section>

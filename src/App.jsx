@@ -8,9 +8,10 @@ import { useEffect, useState } from 'react'
 
 export default function App() {
   const [moviesArray, setMoviesArray] = useState([]);
+  const [seriesArray, setSeriesArray] = useState([]);
 
   return (
-    <GlobalContext.Provider value={{ moviesArray, setMoviesArray }}>
+    <GlobalContext.Provider value={{ moviesArray, setMoviesArray, seriesArray, setSeriesArray }}>
       <Header />
       <SearchPage />
       <Footer />
