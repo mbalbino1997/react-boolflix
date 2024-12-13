@@ -5,7 +5,7 @@ import GlobalContext from "../../context/GlobalContext"
 export default function () {
     const { moviesArray, setMoviesArray, seriesArray } = useContext(GlobalContext);
     return (<>
-        <section>
+        <section className={style.section_top}>
             <div className="container">
                 <h1 className={style.movie_type}>Film</h1>
                 <div className="row">
@@ -18,7 +18,7 @@ export default function () {
                 </div>
             </div>
         </section>
-        <section>
+        <section className={style.section_bot}>
             <div className="container">
                 <h1 className={style.movie_type}>Serie TV</h1>
                 <div className="row">
