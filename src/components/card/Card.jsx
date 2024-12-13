@@ -11,14 +11,16 @@ export default function Card({ movie = "", serie = "" }) {
         en,
         fr
     }
-    const { title, original_title, original_language, vote_average } = movie
+    const validData = movie || serie
+    const { name, original_name, title, original_title, original_language, vote_average } = validData
+
     const BASE_URL = "https://image.tmdb.org/t/p/w342"
     const rating = Math.ceil(vote_average / 2);
     return (
 
         <div className="card">
-            <p>TITOLO: <br />{title}</p>
-            <p>TITOLO ORIGINALE: <br />{original_title}</p>
+            <p>TITOLO: <br />{title || name}</p>
+            <p>TITOLO ORIGINALE: <br />{original_title || original_name}</p>
             <p>LINGUA:</p><img src={flagIcon[original_language]} alt="" />
             <p>VOTO: <br />
                 {[...Array(5)].map((m, i) => (
@@ -29,7 +31,7 @@ export default function Card({ movie = "", serie = "" }) {
                     />
                 ))}</p>
             <figure className={style.img_position}>
-                <img className="card-img" src={movie.poster_path ? `${BASE_URL}${movie.poster_path}` : Placeholder} alt="" />
+                <img className="card-img" src={validData.poster_path ? `${BASE_URL}${validData.poster_path}` : Placeholder} alt="" />
             </figure>
         </div>
 

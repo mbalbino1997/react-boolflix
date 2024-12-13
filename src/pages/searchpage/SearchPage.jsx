@@ -25,7 +25,7 @@ export default function () {
 
                     {seriesArray.map((serie) => (
                         <div key={serie.id} className="col">
-                            <Card movie={serie} />
+                            <Card serie={serie} />
                         </div>
                     ))
                     }
