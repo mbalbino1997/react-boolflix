@@ -3,21 +3,49 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 20px;
+    padding: 0px 30px;
 }
 
 .title {
     color: white;
+    font-size: 4em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    /* Aumenta la distanza tra le lettere */
+    text-align: center;
+    /* Centra il testo */
+    position: relative;
     text-shadow:
         0 0 5px #40E0D0,
-        /* Turchese chiaro */
         0 0 10px #40E0D0,
         0 0 20px #40E0D0,
         0 0 40px #00CED1,
-        /* Più intenso */
         0 0 80px #48D1CC;
-    /* Turchese più morbido */
+    transform: scaleY(0.8);
+    /* Riduce l'altezza della scritta */
+}
 
+.title::before,
+.title::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 30%;
+    height: 2px;
+    /* Linee sottili ai bordi */
+    background-color: white;
+    transform: translateY(-50%);
+}
+
+.title::before {
+    left: 0;
+    /* Linea a sinistra */
+}
+
+.title::after {
+    right: 0;
+    /* Linea a destra */
 }
 
 .search {
@@ -34,7 +62,7 @@ header {
     /* Testo bianco */
     background-color: #1A1A2E;
     /* Blu notte scuro */
-    border: 2px solid #0F3460;
+    border: 2px solid #ffffff;
     /* Blu notte intermedio */
     border-radius: 8px;
     /* Angoli arrotondati */
@@ -46,7 +74,7 @@ header {
 
 /* Effetto al passaggio del mouse */
 .input_text:hover {
-    border-color: #533483;
+    border-color: #4ba8bc;
     /* Colore di bordo accento */
     box-shadow: 0 6px 8px rgba(83, 52, 131, 0.4);
     /* Ombra accento */

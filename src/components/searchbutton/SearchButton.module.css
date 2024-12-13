@@ -1,4 +1,6 @@
 .search_btn {
+    font-family: "Comic Neue", serif;
+    text-transform: uppercase;
     background-color: #40E0D0;
     color: #ffffff;
     border: none;

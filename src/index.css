@@ -7,7 +7,7 @@
 }
 
 body {
-    font-family: 'Bodoni Moda', serif;
+    font-family: "Rubik Glitch", system-ui;
     background-color: #130e44;
 }
 
@@ -20,6 +20,7 @@ body {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+
 }
 
 .col {
@@ -39,12 +40,14 @@ body {
     z-index: 1;
     opacity: 1;
     font-size: 12px;
+
 }
 
 .card {
+    font-family: "Comic Neue", serif;
     overflow: hidden;
     color: rgb(253, 253, 253);
-    border-radius: 10px;
+    border-radius: 7px;
     width: 100%;
     background-color: #000000;
     padding: 5px;
