@@ -12,7 +12,6 @@ export default function Card({ movie = "", serie = "" }) {
         fr
     }
     const { title, original_title, original_language, vote_average } = movie
-    const totalStars = 5;
     const BASE_URL = "https://image.tmdb.org/t/p/w342"
     const rating = Math.ceil(vote_average / 2);
     return (
@@ -22,11 +21,11 @@ export default function Card({ movie = "", serie = "" }) {
             <p>TITOLO ORIGINALE: <br />{original_title}</p>
             <p>LINGUA:</p><img src={flagIcon[original_language]} alt="" />
             <p>VOTO: <br />
-                {[...Array(totalStars)].map((_, index) => (
+                {[...Array(5)].map((m, i) => (
                     <FontAwesomeIcon
-                        key={index}
+                        key={i}
                         icon={faStar}
-                        color={index < rating ? "gold" : "lightgray"}
+                        color={i < rating ? "gold" : "lightgray"}
                     />
                 ))}</p>
             <figure className={style.img_position}>
