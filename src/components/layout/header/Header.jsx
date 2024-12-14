@@ -26,6 +26,16 @@ export default function Header() {
 
         }).catch((err) => { console.error(err.message); })
     }
+    const handleKey = (e) => {
+        if (e.key === "Enter") {
+            e.preventDefault();
+            searchFunction();
+        }
+    }
+    function searchFunction() {
+        fetchData(api_serie)
+        fetchData(api_movie)
+    }
     // useEffect(() => {
     //     fetchData();
 
@@ -35,11 +45,8 @@ export default function Header() {
         <header className={style.header}>
             <h1 className={style.title}>BOOLFLIX</h1>
             <div className={style.search}>
-                <input className={style.input_text} type="text" value={queryText} onChange={(e) => setQueryText(e.target.value)} />
-                <SearchButton onClick={() => {
-                    fetchData(api_serie)
-                    fetchData(api_movie)
-                }} />
+                <input onKeyDown={handleKey} className={style.input_text} type="text" value={queryText} onChange={(e) => setQueryText(e.target.value)} />
+                <SearchButton onClick={searchFunction} />
             </div>
         </header>
         <hr />
