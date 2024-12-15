@@ -17,9 +17,7 @@ header {
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 5px;
-    /* Aumenta la distanza tra le lettere */
     text-align: center;
-    /* Centra il testo */
     position: relative;
     text-shadow:
         0 0 5px #40E0D0,
@@ -28,7 +26,6 @@ header {
         0 0 40px #00CED1,
         0 0 80px #48D1CC;
     transform: scaleY(0.8);
-    /* Riduce l'altezza della scritta */
 }
 
 .title::before,
@@ -38,19 +35,16 @@ header {
     top: 50%;
     width: 30%;
     height: 2px;
-    /* Linee sottili ai bordi */
     background-color: white;
     transform: translateY(-50%);
 }
 
 .title::before {
     left: 0;
-    /* Linea a sinistra */
 }
 
 .title::after {
     right: 0;
-    /* Linea a destra */
 }
 
 .search {
@@ -64,35 +58,21 @@ header {
     padding: 10px 15px;
     font-size: 16px;
     color: #FFFFFF;
-    /* Testo bianco */
     background-color: #1A1A2E;
-    /* Blu notte scuro */
     border: 2px solid #ffffff;
-    /* Blu notte intermedio */
     border-radius: 8px;
-    /* Angoli arrotondati */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
-    /* Leggera ombra */
     transition: all 0.3s ease;
-    /* Animazione fluida per hover e focus */
 }
 
-/* Effetto al passaggio del mouse */
 .input_text:hover {
     border-color: #4ba8bc;
-    /* Colore di bordo accento */
     box-shadow: 0 6px 8px rgba(83, 52, 131, 0.4);
-    /* Ombra accento */
 }
 
-/* Effetto al focus */
 .input_text:focus {
     outline: none;
-    /* Rimuove il bordo predefinito */
     border-color: #3C8DBC;
-    /* Colore blu brillante */
     box-shadow: 0 6px 12px rgba(60, 141, 188, 0.6);
-    /* Ombra più intensa */
     background-color: #162447;
-    /* Blu notte più profondo */
 }

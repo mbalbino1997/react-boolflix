@@ -9,23 +9,28 @@
 body {
     font-family: "Rubik Glitch", system-ui;
     background-color: #130e44;
+    overflow-x: hidden;
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1900px;
     margin: 0 auto;
 }
 
+
 .row {
+    padding: 10px 0;
+    background-color: rgba(0, 0, 0, 0.371);
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 
 }
 
 .col {
-    width: 25%;
-    padding: 2px;
+    width: 16%;
+    flex-shrink: 0;
+    padding: 5px;
 }
 
 
@@ -68,4 +73,48 @@ hr {
     background-color: rgba(26, 255, 0, 0.348);
     border: none;
     height: 1.2px;
+}
+
+.arrowLeft:hover,
+.arrowRight:hover {
+    transform: translateY(-50%) scale(1.3);
+}
+
+.arrowLeft:active,
+.arrowRight:active {
+    background-color: #0e7268;
+}
+
+/* Frecce */
+.arrowLeft,
+.arrowRight {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #40E0D0;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 18px;
+}
+
+.arrowLeft {
+    left: 10px;
+}
+
+.arrowRight {
+    right: 10px;
+}
+
+.arrowLeft:disabled,
+.arrowRight:disabled {
+    display: none;
+    /* Frecce nascoste quando non utilizzabili */
 }
