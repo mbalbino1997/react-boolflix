@@ -32,7 +32,7 @@ export default function SearchPage() {
         setSerieIndex((prevIndex) => Math.min(prevIndex + 1, seriesArray.length - 1));
     };
 
-    return (
+    return ((moviesArray?.length || 0) > 0 || (seriesArray?.length || 0) > 0 ?
         <>
             {/* Sezione Film */}
             <section className={style.section_top}>
@@ -96,5 +96,6 @@ export default function SearchPage() {
                 </div>
             </section>
         </>
+        : <><h1 className="no-results">EFFETTUA UNA RICERCA</h1></>
     );
 }

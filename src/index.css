@@ -118,3 +118,11 @@ hr {
 .arrowRight:active {
     background-color: #0e7268;
 }
+
+.no-results {
+    font-family: "Pixelify Sans", sans-serif;
+    color: white;
+    margin: 100px 0;
+    text-align: center;
+    font-size: 100px;
+}

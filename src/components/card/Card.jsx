@@ -3,13 +3,15 @@ import Placeholder from "../../assets/imgs/placeholder.jpg"
 import it from "../../assets/imgs/it.png"
 import en from "../../assets/imgs/en.png"
 import fr from "../../assets/imgs/fr.png"
+import ja from "../../assets/imgs/jp.png"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 export default function Card({ movie = "", serie = "", onClick = () => { }, index = null }) {
     const flagIcon = {
         it,
         en,
-        fr
+        fr,
+        ja
     }
     const validData = movie || serie
     const { name, original_name, title, original_title, original_language, vote_average, id } = validData
