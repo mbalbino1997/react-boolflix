@@ -5,20 +5,20 @@ import en from "../../assets/imgs/en.png"
 import fr from "../../assets/imgs/fr.png"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
-export default function Card({ movie = "", serie = "" }) {
+export default function Card({ movie = "", serie = "", onClick = () => { }, index = null }) {
     const flagIcon = {
         it,
         en,
         fr
     }
     const validData = movie || serie
-    const { name, original_name, title, original_title, original_language, vote_average } = validData
+    const { name, original_name, title, original_title, original_language, vote_average, id } = validData
 
     const BASE_URL = "https://image.tmdb.org/t/p/w342"
     const rating = Math.ceil(vote_average / 2);
     return (
 
-        <div className="card">
+        <div className={`card ${index === id ? "active" : ""}`} onClick={onClick}>
             <p>TITOLO: <br />{title || name}</p>
             <p>TITOLO ORIGINALE: <br />{original_title || original_name}</p>
             <p>LINGUA:</p><img src={flagIcon[original_language]} alt="" />

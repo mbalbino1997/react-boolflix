@@ -28,13 +28,10 @@ body {
     padding: 2px;
 }
 
-.row:hover .card {
-    opacity: 0.9;
-}
 
-/* Mantieni la card attiva ingrandita */
-.row:hover .card:hover {
-    transform: scale(1.05);
+.active {
+    opacity: 0.9;
+    transform: scale(1.25);
     box-shadow: 0 8px 12px rgba(0, 47, 255, 0.4), 0 4px 6px rgba(106, 0, 255, 0.2);
     z-index: 1;
     opacity: 1;
@@ -63,7 +60,7 @@ body {
 
 
 
-.card:hover .card-img {
+.active .card-img {
     opacity: 0.2;
 }
 
