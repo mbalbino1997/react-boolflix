@@ -4,7 +4,7 @@ import { useContext, useState } from "react";
 import GlobalContext from "../../context/GlobalContext";
 
 export default function SearchPage() {
-    const { moviesArray, seriesArray, movieIndex, serieIndex, setMovieIndex, setSerieIndex } = useContext(GlobalContext);
+    const { booleanFirstFetch, moviesArray, seriesArray, movieIndex, serieIndex, setMovieIndex, setSerieIndex } = useContext(GlobalContext);
 
     // Stati per tracciare l'indice attivo per Film e Serie TV
     const [indexActiveCard, setIndexActiveCard] = useState(null);
@@ -95,6 +95,6 @@ export default function SearchPage() {
                 </div>
             </section>
         </>
-        : <><h1 className="no-results">EFFETTUA UNA RICERCA</h1></>
+        : booleanFirstFetch ? <><h1 className="no-results">NESSUN RISULTATO CORRISPONDENTE</h1></> : <><h1 className="no-results">EFFETTUA UNA RICERCA</h1></>
     );
 }

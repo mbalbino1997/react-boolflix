@@ -8,6 +8,7 @@ export default function Header() {
     const { moviesArray, setMoviesArray } = useContext(GlobalContext);
     const { seriesArray, setSeriesArray } = useContext(GlobalContext);
     const { setMovieIndex, setSerieIndex } = useContext(GlobalContext);
+    const { setBooleanFirstFetch } = useContext(GlobalContext);
     const [queryText, setQueryText] = useState("");
     const BASE_URI = "https://api.themoviedb.org/3/search/";
     const api_movie = "movie";
@@ -31,6 +32,7 @@ export default function Header() {
         if (e.key === "Enter") {
             e.preventDefault();
             searchFunction();
+            setBooleanFirstFetch(true);
         }
     }
     function searchFunction() {

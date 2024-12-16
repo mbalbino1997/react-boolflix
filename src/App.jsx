@@ -11,9 +11,10 @@ export default function App() {
   const [seriesArray, setSeriesArray] = useState([]);
   const [movieIndex, setMovieIndex] = useState(0);
   const [serieIndex, setSerieIndex] = useState(0);
+  const [booleanFirstFetch, setBooleanFirstFetch] = useState(false);
 
   return (
-    <GlobalContext.Provider value={{ moviesArray, setMoviesArray, seriesArray, setSeriesArray, movieIndex, serieIndex, setMovieIndex, setSerieIndex }}>
+    <GlobalContext.Provider value={{ booleanFirstFetch, setBooleanFirstFetch, moviesArray, setMoviesArray, seriesArray, setSeriesArray, movieIndex, serieIndex, setMovieIndex, setSerieIndex }}>
       <Header />
       <SearchPage />
       <Footer />
