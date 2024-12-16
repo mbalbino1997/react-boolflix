@@ -7,6 +7,7 @@ import GlobalContext from "../../../context/GlobalContext";
 export default function Header() {
     const { moviesArray, setMoviesArray } = useContext(GlobalContext);
     const { seriesArray, setSeriesArray } = useContext(GlobalContext);
+    const { setMovieIndex, setSerieIndex } = useContext(GlobalContext);
     const [queryText, setQueryText] = useState("");
     const BASE_URI = "https://api.themoviedb.org/3/search/";
     const api_movie = "movie";
@@ -33,8 +34,10 @@ export default function Header() {
         }
     }
     function searchFunction() {
-        fetchData(api_serie)
-        fetchData(api_movie)
+        fetchData(api_serie);
+        fetchData(api_movie);
+        setMovieIndex(0);
+        setSerieIndex(0);
     }
     // useEffect(() => {
     //     fetchData();

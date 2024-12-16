@@ -4,12 +4,11 @@ import { useContext, useState } from "react";
 import GlobalContext from "../../context/GlobalContext";
 
 export default function SearchPage() {
-    const { moviesArray, seriesArray } = useContext(GlobalContext);
+    const { moviesArray, seriesArray, movieIndex, serieIndex, setMovieIndex, setSerieIndex } = useContext(GlobalContext);
 
     // Stati per tracciare l'indice attivo per Film e Serie TV
     const [indexActiveCard, setIndexActiveCard] = useState(null);
-    const [movieIndex, setMovieIndex] = useState(0); // Indice della prima card visibile per Film
-    const [serieIndex, setSerieIndex] = useState(0); // Indice della prima card visibile per Serie TV
+
 
     // Funzione per gestire la card attiva
     function handleActiveCard(cardID) {
